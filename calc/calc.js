@@ -1,10 +1,9 @@
-window.onload = function() {
-    var btnRun = document.getElementById('btnRun');
-    btnRun.onclick = function() {
-        var x = parseFloat(document.getElementById('inpX').value);
-        var y = parseFloat(document.getElementById('inpY').value);
+    function calc() {
+        var x = parseFloat(document.form.inpX.value);
+        var y = parseFloat(document.form.inpY.value);
         var spnResult = document.getElementById('spnResult');
-        obj = document.getElementById('operation').value;
+        var obj = document.form.operation.value;
+        var r;
         switch (obj) {
             case "div":
                 r = x / y | 0;
@@ -22,7 +21,7 @@ window.onload = function() {
                 r = x / y;
                 break;
             default:
+                break;
         }
         spnResult.innerHTML = r;
     }
-}
