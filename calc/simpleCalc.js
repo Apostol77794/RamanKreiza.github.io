@@ -1,5 +1,5 @@
 function sum(a, b) {
-    res = a + b;
+    var res = a + b;
     return res;
 };
 console.log("SUM");
@@ -17,7 +17,7 @@ console.log(sum('2', 5));
 console.log(sum('2', '5'));
 
 function minus(a, b) {
-    res = a - b;
+    var res = a - b;
     return res;
 };
 console.log("MINUS");
@@ -35,7 +35,7 @@ console.log(minus('2', 5));
 console.log(minus('2', '5'));
 
 function multiply(a, b) {
-    res = a * b;
+    var res = a * b;
     return res;
 };
 console.log("MULTIPLY");
@@ -53,7 +53,7 @@ console.log(multiply('2', 5));
 console.log(multiply('2', '5'));
 
 function div(a, b) {
-    res = a / b;
+    var res = a / b;
     return res;
 };
 console.log("DIV");
@@ -71,8 +71,8 @@ console.log(div('2', 5));
 console.log(div('2', '5'));
 
 function div(a, b) {
-    res = a / b | 0;
-    return res;
+    var res = a / b;
+    return parseInt(res);
 };
 console.log("DIV");
 console.log(div(2, 5));

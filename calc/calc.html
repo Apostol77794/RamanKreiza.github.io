@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     <title>Калькулятор</title>
-</head>
+  </head>
 
-<body>
-    <form name="form">
-        <input id="inpX" type="text" />
-        <select id="operation">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="/">/</option>
-            <option value="*">*</option>
-            <option value="div">div</option>
-          </select>
-        <input id="inpY" type="text" />
-        <button type="button" id="btnRun" onclick="calc();">=</button>
-        <span id="spnResult"></span>
+  <body>
+    <form name="calcForm">
+      <input id="inpX" type="text" />
+      <select id="operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+        <option value="div">div</option>
+      </select>
+      <input id="inpY" type="text" />
+      <button type="button" id="btnRun" onclick="calc();">=</button>
+      <span id="spnResult"></span>
     </form>
     <script type="text/javascript" src="calc.js"></script>
-</body>
+  </body>
 
 </html>
