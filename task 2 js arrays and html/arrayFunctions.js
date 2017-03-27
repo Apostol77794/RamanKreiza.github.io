@@ -18,7 +18,6 @@ console.log(isArray2(5));
 
 function range(a, b, step = 1) {
   var mas = []
-  // condition for one argument
   if (typeof b == 'undefined') {
     b = a;
     a = 0;
