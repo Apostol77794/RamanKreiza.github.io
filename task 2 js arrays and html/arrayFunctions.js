@@ -17,16 +17,25 @@ console.log(isArray2([1, 2, 3]));
 console.log(isArray2(5));
 
 function range(a, b, step) {
-  step = step > 0 ? step : 1;
-  var newArray = []
-  if (typeof b == 'undefined') {
+  if (typeof b === 'undefined') {
     b = a;
     a = 0;
   }
-  for (var i = a; i < b; i += step) {
-    newArray.push(i);
+  if (typeof step === 'undefined') {
+    step = b - a > 0 ? 1 : -1;
   }
-  return newArray;
+  var index = -1,
+    length = Math.ceil((b - a) / (step)),
+    res = [];
+  if (length < 0 || !isFinite(length)) {
+    return res;
+  }
+
+  while (length--) {
+    res[++index] = a;
+    a += step;
+  }
+  return res;
 }
 
 console.log("\nRange");
@@ -34,6 +43,7 @@ console.log(range(5));
 console.log(range(1, 5));
 console.log(range(1, 10, 2));
 console.log(range(10, 20, -2));
+console.log(range(10, 2, -5));
 
 function compact(mas) {
   return mas.filter(function(x) {
