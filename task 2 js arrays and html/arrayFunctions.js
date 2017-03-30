@@ -53,11 +53,11 @@ function compact(mas) {
 
 function compactCycly(array) {
   var newArray = [];
-  array.forEach(function(item) {
-    if (item) {
-      newArray.push(item);
+  for (var i = 0; i < array.length; i++) {
+    if (array[i]) {
+      newArray.push(array[i]);
     }
-  })
+  }
   return newArray;
 }
 
@@ -79,9 +79,9 @@ function sum(array) {
 
 function sumCycle(array) {
   var sum = 0;
-  array.forEach(function(item) {
-    sum += item;
-  });
+  for (var i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
   return sum;
 }
 
