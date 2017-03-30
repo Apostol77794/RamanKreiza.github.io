@@ -1,4 +1,4 @@
-function calc() {
+(function calc() {
     var x = parseFloat(document.calcForm.inpX.value);
     var y = parseFloat(document.calcForm.inpY.value);
     var spnResult = document.getElementById('spnResult');
@@ -25,4 +25,4 @@ function calc() {
             break;
     }
     spnResult.innerHTML = r;
-}
+})();
