@@ -10,12 +10,8 @@ function ArtistsList() {
 ArtistsList.prototype = Object.create(Loader.prototype);
 ArtistsList.prototype.constructor = ArtistsList;
 
-
-ArtistsList.prototype.getQueryParams = function() {
-  return 'http://ws.audioscrobbler.com/2.0/?method=' + this.method + this.api_key + '&format=json';
-};
-
-ArtistsList.prototype.load = function(queryParams) {
+ArtistsList.prototype.load = function() {
+  var queryParams = {};
   return Loader.prototype.load.apply(this, [queryParams]);
 };
 
