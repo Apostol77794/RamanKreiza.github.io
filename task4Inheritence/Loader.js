@@ -46,11 +46,12 @@ Loader.prototype.load = function(queryParams) {
 
 Loader.prototype.getQueryParams = function(queryParams) {
   var query = [];
-  queryParams.api_key = this.api_key;
-  queryParams.format = this.format;
-  queryParams.method = this.method;
-  for (var key in queryParams)
-    query.push(encodeURIComponent(key) + '=' + encodeURIComponent(queryParams[key]));
+  var fullQueryParams = Object.assign({}, queryParams);
+  fullQueryParams.api_key = this.api_key;
+  fullQueryParams.format = this.format;
+  fullQueryParams.method = this.method;
+  for (var key in fullQueryParams)
+    query.push(encodeURIComponent(key) + '=' + encodeURIComponent(fullQueryParams[key]));
   return this.url + query.join('&');
 };
 
